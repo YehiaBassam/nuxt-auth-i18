@@ -20,6 +20,8 @@
     "webpack": "^4.46.0"
   },
   "devDependencies": {
-    "miragejs": "^0.1.43"
+    "miragejs": "^0.1.43",
+    "sass": "^1.57.1",
+    "sass-loader": "^10.4.1"
   }
 }
