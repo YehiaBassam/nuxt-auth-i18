@@ -2,6 +2,5 @@
   <div>
     <Navbar />
     <Hero />
-
   </div>
 </template>
