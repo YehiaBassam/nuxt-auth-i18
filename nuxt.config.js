@@ -1,3 +1,5 @@
+import i18nConfig from "./config/i18n";
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
@@ -34,8 +36,20 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     'bootstrap-vue/nuxt',
+    '@nuxtjs/i18n',
   ],
 
+  // localization
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.js', dir: 'ltr' },
+      { code: 'ar', iso: 'ar-EG', file: 'ar.js', dir: 'rtl' },
+    ],
+    defaultLocale: 'en',
+    vueI18n: i18nConfig,
+  },
+
+  // Bootstrap Icons
   bootstrapVue: {
     // Install the `IconsPlugin` plugin (in addition to `BootstrapVue` plugin)
     icons: true
