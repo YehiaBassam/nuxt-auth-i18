@@ -1,5 +1,7 @@
 <template>
   <div>
-    test
+    <Navbar />
+    <Hero />
+
   </div>
 </template>
