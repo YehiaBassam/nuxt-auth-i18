@@ -6,12 +6,12 @@
         <div class="row flex-center">
           <div class="col-12 col-lg-6">
             <h1 class="text-white pt-4">
-              Welcome to Geeks UI Learning Application
+              {{ $t('welcome') }}
             </h1>
             <p class="summary my-3">
-              Hand-picked Instructor and expertly crafted courses, designed for the modern students and
+              {{ $t('hero_caption_1') }}
               <br />
-              entrepreneur.
+              {{ $t('hero_caption_2') }}
             </p>
 
             <div class="d-flex">

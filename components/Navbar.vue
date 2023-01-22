@@ -44,8 +44,8 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto flex-lg-center flex-row align-items-center mt-4 mt-lg-0">
         <b-dropdown id="dropdown-1" text="Lang" class="m-md-2 d-block">
-          <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">Ar</b-dropdown-item>
+          <b-dropdown-item href="#" @click.prevent.stop="$i18n.setLocale('en')">EN</b-dropdown-item>
+          <b-dropdown-item href="#" @click.prevent.stop="$i18n.setLocale('ar')">AR</b-dropdown-item>
         </b-dropdown>
 
         <div class="d-none d-lg-flex">
