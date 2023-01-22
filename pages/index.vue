@@ -117,22 +117,32 @@ export default {
         })
         return;
       }
+      this.login();
+    },
+    login(){
+      this.$axios
+        .post("api/login", this.form)
+        .then((res) => {
+          if (res.status == 200) {
+            this.$store.commit("setUserLogin", true);
+            this.$bvToast.toast('success Login', {
+              title: `you will be redirect to courses Page`,
+              variant: 'success',
+            })
 
-      // success
-      this.$store.commit("setUserLogin", true);
-      this.$bvToast.toast('success Login', {
-        title: `you will be redirect to courses Page`,
-        variant: 'success',
-      })
-
-      setTimeout(() => {
-        this.$router.push({
-            path: '/home'
+            setTimeout(() => {
+              this.$router.push({
+                  path: '/home'
+              })
+            } ,2000);
+          }
         })
-      } ,2000)
+        .catch((err) => {
+          console.log(err);
+        });
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
