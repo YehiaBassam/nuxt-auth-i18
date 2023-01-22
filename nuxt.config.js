@@ -28,6 +28,7 @@ export default {
   plugins: [
     "@/plugins/mirage.js",
     "@/plugins/vuelidate.js",
+    "@/plugins/axios.js",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

@@ -9,8 +9,5 @@ export default {
           context.commit('setPopularCourses', res.data);
         }
       })
-      .catch((err) => {
-        console.log(err);
-      });
   },
 }
