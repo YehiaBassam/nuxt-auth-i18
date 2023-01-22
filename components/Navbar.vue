@@ -1,6 +1,6 @@
 <template>
   <b-navbar toggleable="lg"  >
-    <b-navbar-brand href="#">
+    <b-navbar-brand class="logo" href="#">
       <img src="~/assets/images/logo.svg" alt="our-education" />
     </b-navbar-brand>
 
@@ -106,5 +106,11 @@ export default {
   width:20%;
   border-radius: 3px;
   border: 1px solid #ced4da;
+}
+
+@media screen and (max-width:320px) {
+  .logo{
+    width: 50px;
+  }
 }
 </style>

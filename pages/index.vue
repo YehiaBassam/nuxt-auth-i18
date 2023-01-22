@@ -3,6 +3,7 @@
     <Navbar />
     <Hero />
     <CoursesWidget />
+    <AppFooter />
 
   </div>
 </template>
