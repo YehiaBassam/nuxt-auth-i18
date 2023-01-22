@@ -35,7 +35,7 @@
         </div>
         <span class="ml-3 text-secondary">Jenny Wilson</span>
       </div>
-      <b-icon-bookmark></b-icon-bookmark>
+      <b-icon-bookmark class="text-secondary"></b-icon-bookmark>
     </div>
   </div>
 </template>
@@ -48,13 +48,18 @@
     border-radius: .5rem;
     transition: all .3s;
 
+    .img{
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem;
+    }
+
     &:hover{
       box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
     }
 
-    .img{
-      border-top-left-radius: .5rem;
-      border-top-right-radius: .5rem;
+    @media screen and (max-width: 1024px) {
+      max-width: 80%;
+      margin: auto;
     }
   }
 </style>
