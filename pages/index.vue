@@ -2,7 +2,8 @@
   <div>
     <Navbar />
     <Hero />
-    <CoursesWidget title="Recommended to you"/>
+    <CoursesWidget title="Recommended to you" coursesType="recommededCourses"/>
+    <CoursesWidget title="Most Popular" coursesType="popularCourses"/>
     <AppFooter />
   </div>
 </template>

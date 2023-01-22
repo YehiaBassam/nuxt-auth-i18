@@ -1,14 +1,14 @@
 <template>
   <div class="card mb-5">
-    <img src="https://geeks-nextjs.vercel.app/images/course/course-graphql.jpg" class="card-img-top img" alt="course"/>
+    <img :src="course.img" class="card-img-top img" alt="course"/>
     <div class="card-body text-dark text-left px-4">
       <h6 class="card-title">
-        A Complete Beginner’s Guide to JavaScript
+        {{ course.title.length > 45 ? `${course.title.substring(0, 45)} ...` : course.title }}
       </h6>
       <div class="d-flex">
         <div class="secondary-color">
           <b-icon-clock></b-icon-clock>
-          4h 10m
+          {{ course.duration }}
         </div>
         <div class="secondary-color ml-3">
           <b-icon-bar-chart-fill class="main-color"></b-icon-bar-chart-fill>
@@ -18,12 +18,12 @@
       <div class="my-3">
         <b-icon-star-fill v-for="i in 5" :key="i" class="text-warning"></b-icon-star-fill>
         <span style="color:#ffaa46">5</span>
-        <span style="color:#a8a3b9">(7.500)</span>
+        <span style="color:#a8a3b9">({{ course.count }})</span>
       </div>
       <div class="d-flex align-items-center">
-        <h6 class="mt-2 mr-1">$700</h6>
+        <h6 class="mt-2 mr-1">${{ course.priceAfterDiscount }}</h6>
         <s class="text-secondary">
-          <small>$850</small>
+          <small>${{ course.price }}</small>
         </s>
       </div>
     </div>
@@ -33,12 +33,23 @@
         <div class="circle-small">
           <img src="~assets/images/avatar-1.jpg" alt="avatar" class="fit"/>
         </div>
-        <span class="ml-3 text-secondary">Jenny Wilson</span>
+        <span class="ml-3 text-secondary">{{ course.instructor }}</span>
       </div>
       <b-icon-bookmark class="text-secondary"></b-icon-bookmark>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props:{
+    course:{
+      type: Object,
+      required: true,
+    },
+  },
+}
+</script>
 
 <style lang="scss" scoped>
   .card{
@@ -49,8 +60,8 @@
     transition: all .3s;
 
     .img{
-      border-top-left-radius: .5rem;
-      border-top-right-radius: .5rem;
+      border-top-left-radius: .5rem !important;
+      border-top-right-radius: .5rem !important;
     }
 
     &:hover{
